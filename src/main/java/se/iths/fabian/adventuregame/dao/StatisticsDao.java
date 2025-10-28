@@ -1,6 +1,6 @@
-package se.sprinto.hakan.adventuregame.dao;
+package se.iths.fabian.adventuregame.dao;
 
-import se.sprinto.hakan.adventuregame.model.Statistics;
+import se.iths.fabian.adventuregame.model.Statistics;
 
 import java.util.List;
 

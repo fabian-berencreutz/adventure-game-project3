@@ -1,4 +1,4 @@
-package se.sprinto.hakan.adventuregame.view;
+package se.iths.fabian.adventuregame.view;
 
 import java.util.Scanner;
 

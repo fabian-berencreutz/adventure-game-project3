@@ -1,6 +1,6 @@
-package se.sprinto.hakan.adventuregame.model;
+package se.iths.fabian.adventuregame.model;
 
-import se.sprinto.hakan.adventuregame.view.UI;
+import se.iths.fabian.adventuregame.view.UI;
 
 public class TreasureRoom implements Room {
 
