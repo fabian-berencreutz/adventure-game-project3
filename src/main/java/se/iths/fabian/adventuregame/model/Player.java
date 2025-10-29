@@ -36,10 +36,6 @@ public class Player extends AbstractCharacter {
         }
     }
 
-//    public Player(String name, int health, int score, int strength) {
-//        super(name, health, score, strength);
-//    }
-
     public boolean hasFoundKey() {
         return foundKey;
     }

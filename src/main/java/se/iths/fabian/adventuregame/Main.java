@@ -18,8 +18,6 @@ public class Main {
 
         ui.showMessage("Välkommen till Äventyrsspelet!");
         String name = ui.getInput("Ange ditt namn:");
-        //Player player = new Player(name, 100, 0, 10);
-
         Player player = new Player.Builder()
                 .name(name)
                 .health(100)
