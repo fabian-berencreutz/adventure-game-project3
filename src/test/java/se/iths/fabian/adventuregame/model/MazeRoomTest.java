@@ -3,18 +3,20 @@ package se.iths.fabian.adventuregame.model;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import se.iths.fabian.adventuregame.model.characters.Player;
-import se.iths.fabian.adventuregame.model.rooms.TreasureRoom;
+import se.iths.fabian.adventuregame.model.rooms.CandyRoom;
+import se.iths.fabian.adventuregame.model.rooms.MazeRoom;
 import se.iths.fabian.adventuregame.view.FakeUI;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TreasureRoomTest {
+public class MazeRoomTest {
 
     @Test
-    @DisplayName("hasOpenedChest() ska returnera true om man hittat båda nycklarna.")
+    @DisplayName("hasFoundMazeKey() ska returnera true")
     void testEnterRoom() {
         FakeUI fakeUI = new FakeUI();
-        TreasureRoom treasureRoom = new TreasureRoom();
+        MazeRoom mazeRoom = new MazeRoom();
         Player player = new Player.Builder()
                 .name("Fabian")
                 .health(100)
@@ -22,12 +24,10 @@ public class TreasureRoomTest {
                 .strength(10)
                 .build();
 
-        player.setFoundKey(true);
-        player.setFoundMazeKey(true);
-        fakeUI.setInput("ja");
+        fakeUI.setInput("s");
 
-        treasureRoom.enterRoom(player, fakeUI);
+        mazeRoom.enterRoom(player, fakeUI);
 
-        assertTrue(player.hasOpenedChest());
+        assertTrue(player.hasFoundMazeKey());
     }
 }
