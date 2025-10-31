@@ -13,11 +13,17 @@ public class CandyRoom implements Room{
         ui.showMessage("Plötsligt känner du en iskall närvaro bakom dig...");
         Utils.delay(2000);
 
-        Death death = new Death("Döden", 100, 0, 9999);
+        String choice = ui.getInput("Vänd dig om? ja/nej");
+        if (choice.equals("ja")) {
+            Death death = new Death("Döden", 100, 0, 9999);
 
-        ui.showMessage(death.getName() + " står framför dig!");
-        Utils.delay(2000);
+            ui.showMessage(death.getName() + " står framför dig!");
+            Utils.delay(2000);
 
-        player.setHealth(0);
+            player.setHealth(0);
+        } else {
+            ui.showMessage("Du blir rädd, smyger ut och går miste om godiset...");
+            Utils.delay(2000);
+        }
     }
 }
