@@ -1,2 +1,11 @@
 Fabian;0
 Fabian;0
+Fabian;1000
+fa;1000
+Fabian;1000
+fa;1000
+fa;0
+fa;0
+fabian;1000
+faa;0
+fa;0

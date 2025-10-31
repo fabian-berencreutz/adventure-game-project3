@@ -4,7 +4,10 @@ import se.iths.fabian.adventuregame.Utils;
 import se.iths.fabian.adventuregame.model.characters.Player;
 import se.iths.fabian.adventuregame.view.UI;
 
+// singleton för att inte kunna gå in i grottan igen.
 public class StartRoom implements Room {
+
+    private CaveRoom caveRoom = new CaveRoom();
 
     @Override
     public void enterRoom(Player player, UI ui) {
@@ -12,7 +15,7 @@ public class StartRoom implements Room {
         boolean exit = false;
         while (!exit) {
             String choice = ui.getInput("Vilken dörr vill du ta? (1=Skog, 2=Fängelse," +
-                    " 3=Skattkammare, 4=Godisrum, q=avsluta)");
+                    " 3=Skattkammare, 4=Godisrum, 5=Grotta, q=avsluta)");
             switch (choice) {
                 case "1":
                     if (!player.hasFoundKey()) {
@@ -34,6 +37,10 @@ public class StartRoom implements Room {
                     break;
                 case "4":
                     new CandyRoom().enterRoom(player, ui);
+                    break;
+                case"5":
+                    caveRoom.enterRoom(player, ui);
+                    break;
                 case "q":
                     exit = true;
                     break;

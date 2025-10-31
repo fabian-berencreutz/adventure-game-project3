@@ -15,7 +15,7 @@ public class CandyRoom implements Room{
 
         Death death = new Death("Döden", 100, 0, 9999);
 
-        ui.showMessage("Döden står framför dig!");
+        ui.showMessage(death.getName() + " står framför dig!");
         Utils.delay(2000);
 
         player.setHealth(0);

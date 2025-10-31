@@ -4,6 +4,7 @@ public class Player extends AbstractCharacter {
     private boolean foundKey;
     private boolean defeatedEnemy;
     private boolean openedChest;
+    private boolean autoWin = false;
 
     private Player(Builder builder) {
         super(builder.name, builder.health, builder.score, builder.strength);
@@ -62,7 +63,15 @@ public class Player extends AbstractCharacter {
     }
 
     public boolean hasWon() {
-        return foundKey && defeatedEnemy && openedChest;
+        return (foundKey && defeatedEnemy && openedChest) || autoWin;
+    }
+
+    public boolean hasAutoWin() {
+        return autoWin;
+    }
+
+    public void setAutoWin(boolean autoWin) {
+        this.autoWin = autoWin;
     }
 
     @Override
