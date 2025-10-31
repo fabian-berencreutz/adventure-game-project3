@@ -11,11 +11,11 @@ public class StartRoom implements Room {
 
     @Override
     public void enterRoom(Player player, UI ui) {
-        ui.showMessage("Du befinner dig i start-rummet. Du ser fyra dörrar framför dig.");
+        ui.showMessage("Du befinner dig i start-rummet. Du ser sex dörrar framför dig.");
         boolean exit = false;
         while (!exit) {
             String choice = ui.getInput("Vilken dörr vill du ta? (1=Skog, 2=Fängelse," +
-                    " 3=Skattkammare, 4=Godisrum, 5=Grotta, q=avsluta)");
+                    " 3=Skattkammare, 4=Godisrum, 5=Grotta, 6=Labyrint, q=avsluta)");
             switch (choice) {
                 case "1":
                     if (!player.hasFoundKey()) {
@@ -40,6 +40,9 @@ public class StartRoom implements Room {
                     break;
                 case"5":
                     caveRoom.enterRoom(player, ui);
+                    break;
+                case "6":
+                    new MazeRoom().enterRoom(player, ui);
                     break;
                 case "q":
                     exit = true;

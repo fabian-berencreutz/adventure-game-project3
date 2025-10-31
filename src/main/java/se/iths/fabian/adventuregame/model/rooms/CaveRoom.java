@@ -27,15 +27,15 @@ public class CaveRoom implements Room{
 
         ui.showMessage("-Jag är mäktigast av alla, säger " + wizard.getName() + ".");
         Utils.delay(2000);
-        ui.showMessage("-Svara rätt på denna fråga så kommer jag att ge dig nyckeln.");
+        ui.showMessage("-Svara rätt på denna fråga så kommer jag att ge dig allt du drömmer om...");
         Utils.delay(2000);
 
-        String choice = ui.getInput("Hur många laxar får plats i en laxask..?");
+        String choice = ui.getInput("Hur många laxar får plats i en laxask..? Skriv ditt svar:");
 
         if (choice.equals("6")) {
             player.setAutoWin(true);
             player.addScore(1000);
-            ui.showMessage("Du får nyckeln och 1000 poäng!!");
+            ui.showMessage("Skatten dyker magiskt upp och du får 1000 poäng!!");
             Utils.delay(2000);
         } else {
             ui.showMessage("Tyvärr, det var fel svar... ");

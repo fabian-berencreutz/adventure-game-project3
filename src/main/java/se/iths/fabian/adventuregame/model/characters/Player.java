@@ -4,7 +4,8 @@ public class Player extends AbstractCharacter {
     private boolean foundKey;
     private boolean defeatedEnemy;
     private boolean openedChest;
-    private boolean autoWin = false;
+    private boolean autoWin;
+    private boolean foundMazeKey;
 
     private Player(Builder builder) {
         super(builder.name, builder.health, builder.score, builder.strength);
@@ -45,6 +46,14 @@ public class Player extends AbstractCharacter {
         this.foundKey = foundKey;
     }
 
+    public boolean hasFoundMazeKey() {
+        return foundMazeKey;
+    }
+
+    public void setFoundMazeKey(boolean found) {
+        this.foundMazeKey = found;
+    }
+
     public boolean hasDefeatedEnemy() {
         return defeatedEnemy;
     }
@@ -63,7 +72,7 @@ public class Player extends AbstractCharacter {
     }
 
     public boolean hasWon() {
-        return (foundKey && defeatedEnemy && openedChest) || autoWin;
+        return (foundKey && defeatedEnemy && openedChest && foundMazeKey) || autoWin;
     }
 
     public boolean hasAutoWin() {
