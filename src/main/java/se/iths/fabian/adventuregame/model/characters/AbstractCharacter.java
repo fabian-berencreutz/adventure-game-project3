@@ -1,4 +1,4 @@
-package se.iths.fabian.adventuregame.model;
+package se.iths.fabian.adventuregame.model.characters;
 
 public abstract class AbstractCharacter {
     private String name;

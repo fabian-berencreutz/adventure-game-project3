@@ -2,6 +2,8 @@ package se.iths.fabian.adventuregame.model;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import se.iths.fabian.adventuregame.model.characters.Player;
+import se.iths.fabian.adventuregame.model.rooms.TreasureRoom;
 import se.iths.fabian.adventuregame.view.FakeUI;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;

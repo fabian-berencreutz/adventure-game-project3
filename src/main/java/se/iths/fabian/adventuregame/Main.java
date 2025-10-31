@@ -2,8 +2,8 @@ package se.iths.fabian.adventuregame;
 
 import se.iths.fabian.adventuregame.dao.FileStatisticsDao;
 import se.iths.fabian.adventuregame.dao.StatisticsDao;
-import se.iths.fabian.adventuregame.model.Player;
-import se.iths.fabian.adventuregame.model.StartRoom;
+import se.iths.fabian.adventuregame.model.characters.Player;
+import se.iths.fabian.adventuregame.model.rooms.StartRoom;
 import se.iths.fabian.adventuregame.model.Statistics;
 import se.iths.fabian.adventuregame.service.StatisticsService;
 import se.iths.fabian.adventuregame.view.ScannerUI;

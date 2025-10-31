@@ -1,4 +1,4 @@
-package se.iths.fabian.adventuregame.model;
+package se.iths.fabian.adventuregame.model.characters;
 
 public class Player extends AbstractCharacter {
     private boolean foundKey;
