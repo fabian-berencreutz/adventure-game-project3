@@ -3,7 +3,6 @@ package se.iths.fabian.adventuregame.dao;
 import se.iths.fabian.adventuregame.model.Statistics;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class FakeFileStatisticsDao implements StatisticsDao {

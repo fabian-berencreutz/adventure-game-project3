@@ -31,7 +31,7 @@ public class MazeRoom implements Room{
                     escaped = true;
                     break;
                 case "d":
-                    ui.showMessage("Du går höger men hamnar vid början av labyrinten igen.");
+                    ui.showMessage("Du går höger men hamnar i en loop!");
                     break;
                 default:
                     ui.showMessage("Ogiltigt val.");

@@ -7,16 +7,8 @@ import se.iths.fabian.adventuregame.view.UI;
 
 public class CaveRoom implements Room{
 
-    private boolean visited = false;
-
     @Override
     public void enterRoom(Player player, UI ui) {
-        if (visited) {
-            ui.showMessage("Grottan har kollapsat och du kan inte gå in.");
-            Utils.delay(2000);
-            return;
-        }
-        visited = true;
 
         ui.showMessage("Du går ner i en mörk grotta, fylld av spindlar...");
         Utils.delay(2000);

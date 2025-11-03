@@ -4,7 +4,6 @@ import se.iths.fabian.adventuregame.Utils;
 import se.iths.fabian.adventuregame.model.characters.Player;
 import se.iths.fabian.adventuregame.view.UI;
 
-// singleton för att inte kunna gå in i grottan igen.
 public class StartRoom implements Room {
 
     private final CaveRoom caveRoom = new CaveRoom();
@@ -28,7 +27,11 @@ public class StartRoom implements Room {
                     break;
 
                 case "2":
-                    new DungeonRoom().enterRoom(player, ui);
+                    if (!player.hasDefeatedEnemy()) {
+                        new DungeonRoom().enterRoom(player, ui);
+                    } else {
+                        ui.showMessage("Du har redan besegrat vätten!");
+                    }
                     break;
 
                 case "3":

@@ -3,3 +3,4 @@ helle;0
 fabian;220
 fabbe;1000
 fa;1000
+ads;0
