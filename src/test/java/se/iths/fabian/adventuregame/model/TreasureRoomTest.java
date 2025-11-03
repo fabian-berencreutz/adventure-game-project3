@@ -1,5 +1,6 @@
 package se.iths.fabian.adventuregame.model;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import se.iths.fabian.adventuregame.model.characters.Player;
@@ -10,17 +11,25 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TreasureRoomTest {
 
-    @Test
-    @DisplayName("hasOpenedChest() ska returnera true om man hittat båda nycklarna.")
-    void testEnterRoom() {
-        FakeUI fakeUI = new FakeUI();
-        TreasureRoom treasureRoom = new TreasureRoom();
-        Player player = new Player.Builder()
+    private FakeUI fakeUI;
+    private TreasureRoom treasureRoom;
+    private Player player;
+
+    @BeforeEach
+    void setUp() {
+        fakeUI = new FakeUI();
+        treasureRoom = new TreasureRoom();
+        player = new Player.Builder()
                 .name("Fabian")
                 .health(100)
                 .score(0)
                 .strength(10)
                 .build();
+    }
+
+    @Test
+    @DisplayName("hasOpenedChest() ska returnera true om man hittat båda nycklarna.")
+    void testEnterRoom() {
 
         player.setFoundKey(true);
         player.setFoundMazeKey(true);

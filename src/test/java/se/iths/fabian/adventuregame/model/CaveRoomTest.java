@@ -1,5 +1,6 @@
 package se.iths.fabian.adventuregame.model;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import se.iths.fabian.adventuregame.model.characters.Player;
@@ -10,17 +11,25 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CaveRoomTest {
 
-    @Test
-    @DisplayName("hasAutoWin() ska returnera true")
-    void testEnterRoom() {
-        FakeUI fakeUI = new FakeUI();
-        CaveRoom caveRoom = new CaveRoom();
-        Player player = new Player.Builder()
+    private FakeUI fakeUI;
+    private CaveRoom caveRoom;
+    private Player player;
+
+    @BeforeEach
+    void setUp() {
+        fakeUI = new FakeUI();
+        caveRoom = new CaveRoom();
+        player = new Player.Builder()
                 .name("Fabian")
                 .health(100)
                 .score(0)
                 .strength(10)
                 .build();
+    }
+
+    @Test
+    @DisplayName("hasAutoWin() ska returnera true")
+    void testEnterRoom() {
 
         fakeUI.setInput("6");
 
