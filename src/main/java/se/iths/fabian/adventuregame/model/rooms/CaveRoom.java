@@ -32,16 +32,15 @@ public class CaveRoom implements Room{
 
         String choice = ui.getInput("Hur många laxar får plats i en laxask..? Skriv ditt svar:");
 
-        if (choice.equals("6")) {
+        if (choice.equals("6") || choice.equalsIgnoreCase("sex")) {
             player.setAutoWin(true);
             player.addScore(1000);
             ui.showMessage("Skatten dyker magiskt upp och du får 1000 poäng!!");
-            Utils.delay(2000);
         } else {
             ui.showMessage("Tyvärr, det var fel svar... ");
-            Utils.delay(2000);
             ui.showMessage("Grottan kollapsar och du springer ut!");
-            Utils.delay(2000);
         }
+
+        Utils.delay(2000);
     }
 }

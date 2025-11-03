@@ -2,3 +2,4 @@ a;0
 helle;0
 fabian;220
 fabbe;1000
+fa;1000

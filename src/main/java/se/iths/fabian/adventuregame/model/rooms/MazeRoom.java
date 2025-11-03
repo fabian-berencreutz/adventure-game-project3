@@ -9,7 +9,7 @@ public class MazeRoom implements Room{
     public void enterRoom(Player player, UI ui) {
         ui.showMessage("Du går in i en gigantisk labyrint med 5 meter höga väggar...");
         Utils.delay(2000);
-        ui.showMessage("För att ta dig ut och hitta måste du ta den rätta vägen.");
+        ui.showMessage("För att ta dig ut och hitta nyckeln måste du ta den rätta vägen.");
         Utils.delay(2000);
 
         boolean escaped = false;
@@ -24,14 +24,14 @@ public class MazeRoom implements Room{
                     ui.showMessage("Du går vänster och kommer fram till en återvändsgränd!");
                     break;
                 case "s":
-                    ui.showMessage("Du går ner och hittar utgången och en nyckeln!");
+                    ui.showMessage("Du går ner, hittar utgången och en nyckel!");
                     Utils.delay(2000);
                     player.setFoundMazeKey(true);
                     player.addScore(50);
                     escaped = true;
                     break;
                 case "d":
-                    ui.showMessage("Du går höger men hamnar vid början igen.");
+                    ui.showMessage("Du går höger men hamnar vid början av labyrinten igen.");
                     break;
                 default:
                     ui.showMessage("Ogiltigt val.");

@@ -7,7 +7,8 @@ import se.iths.fabian.adventuregame.view.UI;
 // singleton för att inte kunna gå in i grottan igen.
 public class StartRoom implements Room {
 
-    private CaveRoom caveRoom = new CaveRoom();
+    private final CaveRoom caveRoom = new CaveRoom();
+    private boolean caveVisited;
 
     @Override
     public void enterRoom(Player player, UI ui) {
@@ -25,9 +26,11 @@ public class StartRoom implements Room {
                     }
 
                     break;
+
                 case "2":
                     new DungeonRoom().enterRoom(player, ui);
                     break;
+
                 case "3":
                     if (!player.hasOpenedChest()) {
                         new TreasureRoom().enterRoom(player, ui);
@@ -35,18 +38,29 @@ public class StartRoom implements Room {
                         System.out.println("Du har redan hittat och öppnat kistan");
                     }
                     break;
+
                 case "4":
                     new CandyRoom().enterRoom(player, ui);
                     break;
+
                 case"5":
-                    caveRoom.enterRoom(player, ui);
+                    if (!caveVisited) {
+                        caveRoom.enterRoom(player, ui);
+                        caveVisited = true;
+                    } else {
+                        ui.showMessage("Grottan har kollapsat och du kan inte gå in.");
+                        Utils.delay(2000);
+                    }
                     break;
+
                 case "6":
                     new MazeRoom().enterRoom(player, ui);
                     break;
+
                 case "q":
                     exit = true;
                     break;
+
                 default:
                     ui.showMessage("Ogiltigt val.");
             }

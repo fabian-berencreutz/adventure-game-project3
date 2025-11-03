@@ -72,7 +72,7 @@ public class Player extends AbstractCharacter {
     }
 
     public boolean hasWon() {
-        return (foundKey && defeatedEnemy && openedChest && foundMazeKey) || autoWin;
+        return (foundKey && foundMazeKey && defeatedEnemy && openedChest) || autoWin;
     }
 
     public boolean hasAutoWin() {
