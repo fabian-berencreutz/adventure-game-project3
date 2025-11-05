@@ -8,7 +8,6 @@ import java.util.List;
 public class FakeFileStatisticsDao implements StatisticsDao {
     @Override
     public void save(Statistics stat) {
-
     }
 
     @Override
