@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class AppInfo {
     private static AppInfo instance;
-    private Properties properties;
+    private final Properties properties;
 
     private AppInfo() {
         properties = new Properties();

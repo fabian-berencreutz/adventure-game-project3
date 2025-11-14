@@ -1,11 +1,3 @@
-a;0
-helle;0
 fabian;220
-fabbe;1000
-fa;1000
-ads;0
-Jimmy;70
-Jimmy2;1000
-jimmy3;220
-fa;50
-fa;0
+fabian;0
+f;1000

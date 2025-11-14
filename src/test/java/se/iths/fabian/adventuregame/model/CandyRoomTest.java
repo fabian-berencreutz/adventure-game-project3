@@ -10,7 +10,6 @@ import se.iths.fabian.adventuregame.view.FakeUI;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CandyRoomTest {
-
     private FakeUI fakeUI;
     private CandyRoom candyRoom;
     private Player player;
